@@ -19,11 +19,6 @@
 		background: url('/images/');
 		font-family: Montserrat;
 		}
-    .profile-pic{
-        max-width: 200px;
-        max-height: 200px;
-        margin: 0 auto;
-        border-radius: 50%;
 </style>
 
 <br>
@@ -38,10 +33,8 @@
 				<button data-produto={{produto.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart" href="#anchor">Desconto 20%</button>
 				<a class="btn btn-outline-success" href="{% url 'product_detail' i.id %}" >Pedir</a>
 				<h4 style="display: inline-block; float: right"><strong>{{i.price|floatformat:2}}Mt</strong></h4>
-
 			</div>
 		</div>
-
 		{% endfor %}
 	</div>
 <br>

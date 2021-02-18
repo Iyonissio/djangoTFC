@@ -21,7 +21,7 @@
 
         <!-- Room Image -->
         <div class="image">
-             <img src="{% static 'images/mesas.jpg' %}"/>
+             <img src="{% static 'images/MesasN.jpg' %}"/>
         </div>
 
         <!-- Room Details -->
@@ -31,18 +31,12 @@
             <div class="home">
                 <a href="{% url 'RoomListView' %}"><i class="fas fa-arrow-alt-circle-left">Pagina Inicial</i></a>
             </div>
+            <br>
 
-            <!-- Div 2: Room Information -->
-            <div class="room-info">
-                 <h2>Faca ja a sua reserva. </h2>
-                <h2>Na Mesa {{room_category}}</h2>
-            </div>
-
-            <!-- Div 3: Room Booking Form -->
             <form id="booking-form" action="" method="POST">
-
+                     <h2>Faca ja a sua reserva. </h2>
+                    <h2>Na Mesa {{room_category}}</h2>
                 {% csrf_token %}
-
                 <!-- Input Div -->
                 <div class="input-div">
                     <label for="id_check_in">Entrada : </label>
