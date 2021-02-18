@@ -37,11 +37,14 @@
                     <a class="btn btn-info btn-md btn-block"  href="#" >Lista de Reclamacoes e Recomendacoes dos Clientes</a>
                          <table class="table table table-striped">
                              <tr>
+                                 <th>Cliente</th>
                                  <th>Reclamacao</th>
                                  <th>Recomendacao</th>
                              </tr>
+                             <br>
                              {% for r in reclamacao %}
                              <tr>
+                                  <td>{{ r.customer }}</td>
                                  <td>{{r.reclamacao}}</td>
                                  <td>{{ r.recomendacao }}</td>
                              </tr>

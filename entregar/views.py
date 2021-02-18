@@ -215,7 +215,7 @@ class RoomDetailView(View):
             }
             return render(request, 'room_detail_view.html', context)
         else:
-            return HttpResponse('Categoria de Mesa nao Existe')
+            return render(request,'mesaIndisponivel.html')
 
     def post(self, request, *args, **kwargs):
         category = self.kwargs.get('category', None)
@@ -248,9 +248,6 @@ class CancelBookingView(DeleteView):
     model = Booking
     template_name = 'booking_cancel_view.html'
     success_url = reverse_lazy('BookingListView')
-
-
-
 
 
 @unauthenticated_user

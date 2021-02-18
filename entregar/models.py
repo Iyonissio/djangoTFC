@@ -143,6 +143,7 @@ class Order(models.Model):
         return self.product.name
 
 class recomendacoes(models.Model):
+    customer = models.ForeignKey(Customer, null=True, on_delete=models.SET_NULL)
     reclamacao = models.TextField(blank=True,null=True, max_length=5000)
     recomendacao = models.TextField(blank=True, null=True, max_length=5000)
 
