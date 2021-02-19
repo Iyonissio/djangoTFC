@@ -1,17 +1,55 @@
 <!DOCTYPE html>
+{% load static %}
+
+{% block content %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        h1 {
-            text-align: center
+    html,
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size-adjust: u
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background: #00B0FF;
+      justify-content: center;
+      align-items: center;
+    }
 
+        h1,p {
+            text-align: center
+        }
+         IMG.displayed {
+            display: block;
+          }
+        .checkout-panel {
+            display: flex;
+            flex-direction: column;
+            width: 640px;
+            height: 366px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
         }
     </style>
-    <h1>Nao Disponivel</h1>
+    <div class="checkout-panel">
+         <h1> No Momento Mesa Não Disponivel Para Reserva </h1>
+        <p><strong>Nota: </strong>Tente efectuar reserva em outra categoria de mesas</p>
+         <IMG class="displayed" src="{% static 'images/MesasA.png' %}" alt="...">
+               <br>
+               <br>
+               <br>
+    </div>
+
 </head>
 <body>
 
 </body>
 </html>
+{% endblock %}
